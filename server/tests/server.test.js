@@ -197,7 +197,7 @@ describe('PATCH /todos/:id', () => {
       .end(done);
   });
 
-  it('should Not update todo', (done) => {
+  it('should Not update todo created by other users', (done) => {
     var hexID = todos[1]._id.toHexString();
     var text = 'This should be the new text';
 
